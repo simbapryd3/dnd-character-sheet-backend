@@ -1,10 +1,8 @@
 const express = "express";
 const router = express.router();
 
-//GET single race
-router.get("/:id", raceController.findById);
+router.get("/all", raceController.findAllRaces);
 
-//GET all races
-router.get("/all", raceController.findAll);
+router.get("/:id", raceController.findRaceById);
 
 module.exports = router;
