@@ -1,4 +1,4 @@
-const character = require("../services/Character.service");
+const character = require("../services/class.service");
 
 describe("", () => {
     test("", () => {
