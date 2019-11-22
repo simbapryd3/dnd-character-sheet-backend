@@ -1,5 +1,6 @@
-const express = "express";
-const router = express.router();
+const express = require("express");
+const router = express.Router();
+const raceController = require('../controllers/Race-controller');
 
 router.get("/all", raceController.findAllRaces);
 

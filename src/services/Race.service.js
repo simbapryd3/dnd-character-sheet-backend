@@ -1,9 +1,17 @@
+// global.fetch = require('node-fetch');
+
 module.exports = {
     async findAll() {
-        const url = 'http://dnd5eapi.co/api/races/';
-        const rawResponse = await fetch(url);
-        const races = await rawResponse.json();
-        return races;
+        try {
+            const options = { method: "GET", headers: {"Accept": "application/json"}}
+            const url = 'http://dnd5eapi.co/api/races/';
+            const rawResponse = await fetch(url, options);
+            const races = await rawResponse.json();
+            return races;
+
+        } catch (err) {
+            return err
+        }
     },
     
     async findById(id) {

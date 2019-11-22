@@ -1,5 +1,5 @@
-const express = "express";
-const router = express.router();
+const express = require("express");
+const router = express.Router();
 
 //GET single character
 router.get("/:id", characterController.findById);
