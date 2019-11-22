@@ -11,8 +11,8 @@ class ClassController {
   static async findClassById(req, res) {
     const id = req.params.id;
     const foundClass = await classService.findById(id);
-    const { index, name, hit_die } = foundClass;
-    res.json({ index, name, hit_die });
+    const { name, index, hit_die } = foundClass;
+    res.json({ name, index, hit_die });
   }
 }
 module.exports = ClassController;

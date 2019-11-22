@@ -1,17 +1,29 @@
-const character = require("../services/class.service");
+// Class Service Testing
 
-describe("", () => {
-    test("", () => {
+const dndClass = require("../services/class.service");
 
-        //arrange
-         const 
+describe("Class service", () => {
+    describe("findById", () => {
+        test("should return /classes/${id} when given id", () => {
 
-        //act
+            //arrange
+            const barbarianClass = [
+                { id: 1, url:"http://www.dnd5eapi.co/api/classes/1" }
+            ];
 
-        //assert
-        expect()
+            //act
+            const response = dndClass.findById(1);
+            
+            //assert
+            expect(response).toEqual(barbarianClass);
 
+            
+        }),
+
+    // describe("findAll", () => {
         
-    }
+    // })
+    })
+})    
 
-})
+// http://www.dnd5eapi.co/api/classes/1
