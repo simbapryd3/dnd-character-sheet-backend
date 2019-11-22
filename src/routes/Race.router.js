@@ -1,10 +1,9 @@
-const express = "express";
-const router = express.router();
+const express = require("express");
+const router = express.Router();
+const raceController = require('../controllers/Race-controller');
 
-//GET single race
-router.get("/:id", raceController.findById);
+router.get("/all", raceController.findAllRaces);
 
-//GET all races
-router.get("/all", raceController.findAll);
+router.get("/:id", raceController.findRaceById);
 
 module.exports = router;
