@@ -3,7 +3,7 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const cors = require("cors");
-global.fetch = require("node-fetch");
+
 // const classRouter = require('./src/routes/Class.router');
 const raceRouter = require('./src/routes/Race.router');
 

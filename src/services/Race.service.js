@@ -1,4 +1,4 @@
-// global.fetch = require('node-fetch');
+const fetch = require('node-fetch');
 
 module.exports = {
     async findAll() {
