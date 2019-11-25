@@ -1,4 +1,4 @@
-const raceService = require("../services/Race.service");
+const raceService = require("../services/Race-service");
 
 class RaceController {
   static async findAllRaces(req, res) {

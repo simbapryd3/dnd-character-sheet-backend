@@ -4,12 +4,12 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const cors = require("cors");
 
-// const classRouter = require('./src/routes/Class.router');
-const raceRouter = require('./src/routes/Race.router');
+const classRouter = require('./src/routes/Class-router');
+const raceRouter = require('./src/routes/Race-router');
 
 const app = express();
 app.use(cors());
-// app.use('/class', classRouter);
+app.use('/classes', classRouter);
 app.use('/races', raceRouter);
 
 app.use(logger('dev'));
