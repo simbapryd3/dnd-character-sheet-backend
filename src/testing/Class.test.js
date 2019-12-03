@@ -1,26 +1,15 @@
-// Class Service Testing
+//class service test
 
-const dndClass = require("../services/Class.service");
+const dndClass = require("../services/Class-service");
+const dndClassController = require("../controllers/Class-controller");
 
-describe("Class service", () => {
-    describe("findById", () => {
-        test("should return /classes/${id} when given id", () => {
-            //arrange
-            const barbarianClass = [
-                { id: 1, url:"http://www.dnd5eapi.co/api/classes/1" }
-            ];
-
-            //act
-            const response = dndClass.findById(1);
-            
-            //assert
-            expect(response).toEqual(barbarianClass);
-        })
-
-    // describe("findAll", () => {  
-    // })
+describe("dndClass API gets called", () => {
+    test("findBYID should return object with all dnd classes", () => {
+        dndClass.findAll = jest.fn(() => []);
+        dndClassController.findAllClasses();
+        expect(dndClass.findAll).toHaveBeenCalled();
 
     })
-})    
+});
 
-// http://www.dnd5eapi.co/api/classes/1
+
