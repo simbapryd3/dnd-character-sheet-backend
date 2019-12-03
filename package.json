@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll --colors",
-    "start": "nodemon app.js"
+    "start": " nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "d20": "^1.4.1",
     "express": "^4.17.1",
     "fetch": "^1.1.0",
+    "jest": "^24.9.0",
     "morgan": "^1.9.1",
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.1",
