@@ -16,3 +16,7 @@ describe("Races API Calls", () => {
   });
 });
 
+
+//My setup would look a little like this
+RaceService.findAll.mockImplementationOnce(() => Promise.resolve())
+//this mocks the implementation of the serrvice, it may need some tweaking because I'm not completely familiar with your application
