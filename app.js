@@ -3,16 +3,19 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const cors = require("cors");
+var d20 = require("d20");
 
-// const classRouter = require('./src/routes/Class.router');
-const raceRouter = require('./src/routes/Race.router');
+const classRouter = require("./src/routes/Class-router");
+const raceRouter = require("./src/routes/Race-router");
+const diceRouter = require("./src/routes/Dice-router");
 
 const app = express();
 app.use(cors());
-// app.use('/class', classRouter);
-app.use('/races', raceRouter);
+app.use("/classes", classRouter);
+app.use("/races", raceRouter);
+app.use("/roll", diceRouter);
 
-app.use(logger('dev'));
+app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -23,6 +26,6 @@ app.use(cookieParser());
 //     console.log(json)
 // })
 
-app.listen(3000, () => {
-    console.log("aye we here")
-})
+app.listen(4000, () => {
+  console.log("aye we here");
+});
